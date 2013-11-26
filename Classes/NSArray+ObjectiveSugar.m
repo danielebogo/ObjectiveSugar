@@ -75,6 +75,10 @@ static NSString * const OSMinusString = @"-";
     return [self containsObject:object];
 }
 
+- (BOOL) hasIndex:(int)index {
+    return index < self.count;
+}
+
 - (NSArray *)take:(NSUInteger)numberOfElements {
     return [self subarrayWithRange:NSMakeRange(0, MIN(numberOfElements, [self count]))];
 }
